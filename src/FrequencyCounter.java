@@ -51,4 +51,18 @@ public class FrequencyCounter {
             System.out.printf("Слово %s встречается %d раз\n", entry.getKey(), entry.getValue());
         }
     }
+
+    public void maxCountEncounteredWord() {
+        String mostFrequentWord = null;
+        int maxCount = 0;
+        for(Map.Entry<String, Integer> entry: frequencyMap.entrySet()) {
+            String word = entry.getKey();
+            int count = entry.getValue();
+            if (count > maxCount) {
+                mostFrequentWord = word;
+                maxCount = count;
+            }
+        }
+        System.out.println("Самое встречаемое слово: " + mostFrequentWord + " - " + maxCount + " раз");
+    }
 }

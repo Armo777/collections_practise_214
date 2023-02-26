@@ -8,7 +8,7 @@ public class Program {
     public static void main(String[] args) {
         FrequencyCounter counter = new FrequencyCounter("War and piece.txt");
         counter.printStat();    //печать статистики на экран
-
+        counter.maxCountEncounteredWord(); // добавил метод
 
     }
 }
